@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +11,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <!-- add css -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,7 +22,8 @@
         <div class="container flex items-center justify-between">
             <!-- logo -->
             <a href="#" class="block w-32">
-                <img src="images/logo.svg" alt="logo" class="w-full">
+                <!-- <img src="images/logo.svg" alt="logo" class="w-full"> -->
+                <img src="{% static 'images/logo.svg' %}" alt="logo" class="w-full">
             </a>
             <!-- logo end -->
 
