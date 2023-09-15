@@ -8,3 +8,9 @@ def home(request):
 
 
 
+def shop(request):
+    return render(request, 'shop.html')
+
+def view(request):
+    return render(request, 'view.html')
+
