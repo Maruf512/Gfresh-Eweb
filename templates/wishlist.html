@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
         integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
         crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css">
+    <!-- add css -->
+    <link href="{% static '/css/style.css' %}" rel="stylesheet" type="text/css">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
         <div class="container flex items-center justify-between">
             <!-- logo -->
             <a href="#" class="block w-32">
-                <img src="images/logo.svg" alt="logo" class="w-full">
+                <img src="{% static 'images/logo.svg' %}" alt="logo" class="w-full">
             </a>
             <!-- logo end -->
 
@@ -40,7 +42,7 @@
 
             <!-- navicons -->
             <div class="space-x-4 flex items-center">
-                <a href="wishlist.html" class="block text-center text-gray-700 hover:text-primary transition relative">
+                <a href="wishlist" class="block text-center text-gray-700 hover:text-primary transition relative">
                     <span
                         class="absolute -right-0 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">5</span>
                     <div class="text-2xl">
@@ -48,7 +50,7 @@
                     </div>
                     <div class="text-xs leading-3">Wish List</div>
                 </a>
-                <a href="cart.html"
+                <a href="cart"
                     class="lg:block text-center text-gray-700 hover:text-primary transition hidden relative">
                     <span
                         class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">3</span>
@@ -57,7 +59,7 @@
                     </div>
                     <div class="text-xs leading-3">Cart</div>
                 </a>
-                <a href="account.html" class="block text-center text-gray-700 hover:text-primary transition">
+                <a href="account" class="block text-center text-gray-700 hover:text-primary transition">
                     <div class="text-2xl">
                         <i class="far fa-user"></i>
                     </div>
@@ -85,37 +87,37 @@
                         class="absolute left-0 top-full w-full divide-gray-300 divide-dashed divide-y bg-white shadow-md py-3 invisible opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300 z-50">
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/bed.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/bed.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Bedroom</span>
                         </a>
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/sofa.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/sofa.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Sofa</span>
                         </a>
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/office.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/office.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Office</span>
                         </a>
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/terrace.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/terrace.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Outdoor</span>
                         </a>
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/bed-2.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/bed-2.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Mattress</span>
                         </a>
                         <!-- single category end -->
                         <!-- single category -->
                         <a href="#" class="px-6 py-3 flex items-center border-gray-300 hover:bg-gray-100 transition">
-                            <img src="images/icons/restaurant.svg" class="w-5 h-5 object-contain">
+                            <img src="{% static 'images/icons/restaurant.svg' %}" class="w-5 h-5 object-contain">
                             <span class="ml-6 text-gray-600 text-sm">Sofa</span>
                         </a>
                         <!-- single category end -->
@@ -126,12 +128,12 @@
                 <!-- nav menu -->
                 <div class="flex items-center justify-between flex-grow pl-12">
                     <div class="flex items-center space-x-6 text-base capitalize">
-                        <a href="index.html" class="text-gray-200 hover:text-white transition">Home</a>
-                        <a href="shop.html" class="text-gray-200 hover:text-white transition">Shop</a>
+                        <a href="/" class="text-gray-200 hover:text-white transition">Home</a>
+                        <a href="shop" class="text-gray-200 hover:text-white transition">Shop</a>
                         <a href="#" class="text-gray-200 hover:text-white transition">About us</a>
                         <a href="#" class="text-gray-200 hover:text-white transition">Contact us</a>
                     </div>
-                    <a href="login.html" class="ml-auto justify-self-end text-gray-200 hover:text-white transition">
+                    <a href="login" class="ml-auto justify-self-end text-gray-200 hover:text-white transition">
                         Login/Register
                     </a>
                 </div>
@@ -163,7 +165,7 @@
             </div>
             <div class="text-xs leading-3">Search</div>
         </a>
-        <a href="cart.html" class="text-center text-gray-700 hover:text-primary transition relative">
+        <a href="cart" class="text-center text-gray-700 hover:text-primary transition relative">
             <span
                 class="absolute -right-3 -top-1 w-5 h-5 rounded-full flex items-center justify-center bg-primary text-white text-xs">3</span>
             <div class="text-2xl">
@@ -184,10 +186,10 @@
             <!-- navlink -->
             <h3 class="text-xl font-semibold text-gray-700 mb-1 font-roboto pl-4 pt-4">Menu</h3>
             <div class="">
-                <a href="index.html" class="block px-4 py-2 font-medium transition hover:bg-gray-100">
+                <a href="/" class="block px-4 py-2 font-medium transition hover:bg-gray-100">
                     Home
                 </a>
-                <a href="shop.html" class="block px-4 py-2 font-medium transition hover:bg-gray-100">
+                <a href="shop" class="block px-4 py-2 font-medium transition hover:bg-gray-100">
                     Shop
                 </a>
                 <a href="#" class="block px-4 py-2 font-medium transition hover:bg-gray-100">
@@ -204,7 +206,7 @@
 
     <!-- breadcrum -->
     <div class="py-4 container flex gap-3 items-center">
-        <a href="index.html" class="text-primary text-base">
+        <a href="/" class="text-primary text-base">
             <i class="fas fa-home"></i>
         </a>
         <span class="text-sm text-gray-400"><i class="fas fa-chevron-right"></i></span>
@@ -219,7 +221,7 @@
             <!-- account profile -->
             <div class="px-4 py-3 shadow flex items-center gap-4">
                 <div class="flex-shrink-0">
-                    <img src="images/avatar.png" class="rounded-full w-14 h-14 p-1 border border-gray-200 object-cover">
+                    <img src="{% static 'images/avatar.png' %}" class="rounded-full w-14 h-14 p-1 border border-gray-200 object-cover">
                 </div>
                 <div>
                     <p class="text-gray-600">Hello,</p>
@@ -232,18 +234,18 @@
             <div class="mt-6 bg-white shadow rounded p-4 divide-y divide-gray-200 space-y-4 text-gray-600">
                 <!-- single link -->
                 <div class="space-y-1 pl-8">
-                    <a href="account.html"
+                    <a href="account"
                         class="relative text-base font-medium capitalize hover:text-primary transition block">
                         Manage account
                         <span class="absolute -left-8 top-0 text-base">
                             <i class="far fa-address-card"></i>
                         </span>
                     </a>
-                    <a href="profile-info.html" class="hover:text-primary transition capitalize block">Profile
+                    <a href="profile-info" class="hover:text-primary transition capitalize block">Profile
                         information</a>
-                    <a href="manage-address.html" class="hover:text-primary transition capitalize block">Manage
+                    <a href="manage-address" class="hover:text-primary transition capitalize block">Manage
                         address</a>
-                    <a href="change-password.html" class="hover:text-primary transition capitalize block">change
+                    <a href="change-password" class="hover:text-primary transition capitalize block">change
                         password</a>
                 </div>
                 <!-- single link end -->
@@ -275,7 +277,7 @@
                 <!-- single link end -->
                 <!-- single link -->
                 <div class="pl-8 pt-4">
-                    <a href="wishlist.html"
+                    <a href="wishlist"
                         class="relative medium capitalize font-medium hover:text-primary transition block text-primary">
                         my wishlist
                         <span class="absolute -left-8 top-0 text-base">
@@ -307,7 +309,7 @@
                 class="flex items-center md:justify-between gap-4 md:gap-6 p-4 border border-gray-200 rounded flex-wrap md:flex-nowrap">
                 <!-- cart image -->
                 <div class="w-28 flex-shrink-0">
-                    <img src="images/products/product9.jpg"  class="w-full">
+                    <img src="{% static 'images/products/product9.jpg' %}"  class="w-full">
                 </div>
                 <!-- cart image end -->
                 <!-- cart content -->
@@ -335,13 +337,13 @@
                 class="flex items-center md:justify-between gap-4 md:gap-6 p-4 border border-gray-200 rounded flex-wrap md:flex-nowrap">
                 <!-- cart image -->
                 <div class="w-28 flex-shrink-0">
-                    <img src="images/products/product9.jpg"  class="w-full">
+                    <img src="{% static 'images/products/product12.jpg' %}"  class="w-full">
                 </div>
                 <!-- cart image end -->
                 <!-- cart content -->
                 <div class="md:w-1/3 w-full">
                     <h2 class="text-gray-800 mb-1 xl:text-xl textl-lg font-medium uppercase">
-                        Italian L Shape Sofa
+                        Italian L Shape Table
                     </h2>
                     <p class="text-gray-500 text-sm">Availability: <span class="text-red-600">Out of Stock</span></p>
                 </div>
@@ -370,7 +372,7 @@
             <div class="xl:grid xl:grid-cols-3 xl:gap-8">
                 <!-- footer text -->
                 <div class="space-y-8 xl:col-span-1">
-                    <img class="w-30" src="images/logo.svg" alt="Company name">
+                    <img class="w-30" src="{% static 'images/logo.svg' %}" alt="Company name">
                     <p class="text-gray-500 text-base">
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio facere rem
                     </p>
@@ -484,7 +486,7 @@
         <div class="container flex items-center justify-between">
             <p class="text-white">© RAFCART - All Rights Reserved</p>
             <div>
-                <img src="images/methods.png" class="h-5">
+                <img src="{% static 'images/methods.png' %}" class="h-5">
             </div>
         </div>
     </div>
