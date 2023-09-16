@@ -12,4 +12,7 @@ urlpatterns = [
     path("profile-info", views.profile_info, name="Profile-Info"),
     path("manage-address", views.manage_address, name="Manage-Address"),
     path("change-password", views.change_password, name="Change-Password"),
+    path("order-complete", views.order_complete, name="Order-Complete"),
+    path("cart", views.cart, name="Cart"),
+    path("checkout", views.checkout, name="Checkout"),
 ]

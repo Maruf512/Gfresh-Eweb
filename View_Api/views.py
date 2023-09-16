@@ -41,3 +41,15 @@ def manage_address(request):
 
 def change_password(request):
     return render(request, 'change-password.html')
+
+
+def order_complete(request):
+    return render(request, 'order-complete.html')
+
+
+def cart(request):
+    return render(request, 'cart.html')
+
+
+def checkout(request):
+    return render(request, 'checkout.html')
