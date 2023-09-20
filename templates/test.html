@@ -1,0 +1,9 @@
+
+<h1>Login</h1>
+
+{% for item in users %}
+    <p>First Name: {{ item.first_name }} </p>
+    <p>Email: {{ item.email }} </p>
+    <p>Password: {{ item.passwd }} </p>
+    <hr>
+{% endfor %}

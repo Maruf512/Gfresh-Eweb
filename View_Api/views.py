@@ -1,7 +1,10 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.contrib.auth.hashers import make_password, check_password   # to make a hash password and to read that password
+from .models import User
 
 # Create your views here.
+print(make_password("1212"))
+print(check_password('1212','pbkdf2_sha256$600000$giYToBZw4wPEquRnsEtL3d$NRKJk/QdQBBCjaq2BuxiHW+J7jdPLMS8EKz68x1D4EE='))
 
 def home(request):
     return render(request, 'home.html')
@@ -20,7 +23,8 @@ def wishlist(request):
 
 
 def login(request):
-    return render(request, 'login.html')
+    all_users = User.objects.all
+    return render(request, 'test.html', {'users':all_users})
 
 
 def register(request):
