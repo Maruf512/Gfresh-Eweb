@@ -134,7 +134,7 @@
                         <a href="/contact-us" class="text-gray-200 hover:text-white transition">Contact us</a>
                     </div>
                     <a href="/login" class="ml-auto justify-self-end text-gray-200 hover:text-white transition">
-                        Login/Register
+                        {% block user_data %}{{ user_data }}{% endblock user_data %}
                     </a>
                 </div>
                 <!-- nav menu end -->

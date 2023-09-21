@@ -1,6 +1,12 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, redirect
 from django.contrib.auth.hashers import make_password, check_password   # to make a hash password and to read that password
 from .models import User
+
+
+# =======================================================
+# ========== Additional Veriabl =========================
+# =======================================================
+logged_in_user = "Login/Register"
 
 
 # =======================================================
@@ -26,7 +32,7 @@ def get_user_data(get_data_by):
 # ========== Home Section ===============================
 # =======================================================
 def home(request):
-    return render(request, 'home.html')
+    return render(request, 'home.html', {'user_data':logged_in_user})
 
 
 # =======================================================
